@@ -34,8 +34,14 @@ export default class CallbackPromise extends React.Component {
   render() {
     return (<div>
       <Heading size={1} fit textColor="primary" caps={false}>Callback vs Promise</Heading>
-      <CodePane source={callback} lang={"javascript"} margin={10}/>
-      <CodePane source={promise} lang={"javascript"} margin={10}/>
+      <div className="row">
+        <div className="col-xs-6">
+          <CodePane source={callback} lang={"javascript"} margin={10}/>
+        </div>
+        <div className="col-xs-6">
+          <CodePane source={promise} lang={"javascript"} margin={10}/>
+        </div>
+      </div>
     </div>);
   }
 }
