@@ -12,19 +12,26 @@ const callback = `getData(function(a){
         getData(b, function(c){
             getData(c, function(d){
                 getData(d, function(e){
-                    ...
+                    getData(d, function(e){
+                      // Handle result
+                      // Error?
+                    });
                 });
             });
         });
     });
 });`;
-const promise = `const getDataPromise = (arg) => new Promise((resolve, reject) => {
-  getData(arg, function(err, result) {
-    if (err) reject(err);
-    resolve(result);
-  })
-});
+const promise = `const getDataPromise = function() {
+  return new Promise(function(resolve, reject) {
+    getData(arg, function(err, result) {
+      if (err) reject(err);
+      resolve(result);
+    });
+  });
+}
 getDataPromise(arg)
+.then(getDataPromise)
+.then(getDataPromise)
 .then(getDataPromise)
 .then(getDataPromise)
 .then(getDataPromise)
@@ -35,11 +42,11 @@ export default class CallbackPromise extends React.Component {
     return (<div>
       <Heading size={1} fit textColor="primary" caps={false}>Callback vs Promise</Heading>
       <div className="row">
-        <div className="col-xs-6">
-          <CodePane source={callback} lang={"javascript"} margin={10}/>
+        <div className="col-xs-5">
+          <CodePane source={callback} lang={"javascript"} margin={20}/>
         </div>
-        <div className="col-xs-6">
-          <CodePane source={promise} lang={"javascript"} margin={10}/>
+        <div className="col-xs-7">
+          <CodePane source={promise} lang={"javascript"} margin={20}/>
         </div>
       </div>
     </div>);
