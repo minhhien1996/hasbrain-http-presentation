@@ -8,13 +8,16 @@ import {
 } from "spectacle";
 
 const callback = `getData(function(a){
-    getData(a, function(b){
-        getData(b, function(c){
-            getData(c, function(d){
-                getData(d, function(e){
-                    getData(d, function(e){
-                      // Handle result
-                      // Error?
+    getData(a, function(err, b){
+        if (err) handleError(err);
+        getData(b, function(err, c){
+            if (err) handleError(err);
+            getData(c, function(err, d){
+                if (err) handleError(err);
+                getData(d, function(err, e){
+                    getData(d, function(err, e){
+                      if (err) handleError(err);
+                      ...
                     });
                 });
             });
@@ -42,10 +45,10 @@ export default class CallbackPromise extends React.Component {
     return (<div>
       <Heading size={1} fit textColor="primary" caps={false}>Callback vs Promise</Heading>
       <div className="row">
-        <div className="col-xs-5">
+        <div className="col-xs-6">
           <CodePane source={callback} lang={"javascript"} margin={20}/>
         </div>
-        <div className="col-xs-7">
+        <div className="col-xs-6">
           <CodePane source={promise} lang={"javascript"} margin={20}/>
         </div>
       </div>
