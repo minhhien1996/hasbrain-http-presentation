@@ -23,10 +23,10 @@ export default class ProtocolDefinition extends React.Component {
   render() {
     return (
       <div>
-        <Heading size={1} fit bold caps lineHeight={1} textColor="secondary">
+        <Heading size={1} fit bold lineHeight={1} textColor="secondary" fit>
           The Protocol
         </Heading>
-        <Text>
+        <Text textColor="primary">
           is a defined set of rules and regulations that determine how data is transmitted in telecommunications and computer networking
         </Text>
         <CodePane source={demoHttpRequest} margin={10}/>

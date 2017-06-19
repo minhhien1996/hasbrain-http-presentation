@@ -12,7 +12,7 @@ export default class ProtocolDefinition extends React.Component {
   render() {
     return (
       <div>
-        <Heading size={6} textColor="secondary" caps>HTTP - Main points</Heading>
+        <Heading size={1} textColor="primary" fit>HTTP - Main points</Heading>
         <List>
           <ListItem>TCP on default port 80</ListItem>
           <ListItem>URL and query string</ListItem>
