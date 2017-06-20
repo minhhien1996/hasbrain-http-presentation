@@ -4,7 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Heading,
-  Text,
   S,
   BlockQuote,
   Quote,
@@ -19,9 +18,9 @@ export default class WarmUpSlide extends React.Component {
           HTTP - Who are you?
         </Heading>
         <BlockQuote>
-            <Quote textSize={50} bold={false} textFont={"Helvetica"}>Hypertext Transfer <S type={"underline"}>Protocol</S>, is the mechanism through which data is <S type={"underline"}>requested</S> and <S type={"underline"}>provided</S> on the World Wide Web</Quote>
-            <Cite>Wikipedia</Cite>
-          </BlockQuote>
+          <Quote textSize={50} bold={false} padding={10} style={ { "line-height": 70 } }>Hypertext Transfer <S type={"underline"}>Protocol</S> is the mechanism through which data is <S type={"bold"}>requested</S> and <S type={"bold"}>provided</S> on the World Wide Web</Quote>
+          <Cite>Marijn Haverbeke, 2014, <S type="bold">Eloquent Javascript</S></Cite>
+        </BlockQuote>
       </div>
     );
   }

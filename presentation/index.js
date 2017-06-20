@@ -3,29 +3,20 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
-  Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text
+  Slide
 } from "spectacle";
 
 import WarmUpSlide from "./WarmUpSlide";
 import ProtocolDefinition from "./ProtocolDefinition";
 import HttpProtocol from "./HttpProtocol";
 import BrowsersAndHttpForm from "./BrowsersAndHttpForm";
+import UrlEncoded from "./UrlEncoded";
 import BrowsersAndHttpXhr from "./BrowsersAndHttpXhr";
 import BrowsersAndHttpSandBox from "./BrowsersAndHttpSandBox";
 import Async from "./Async";
 import AsyncEventloop from "./AsyncEventloop";
 import CallbackPromise from "./CallbackPromise";
-
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -33,16 +24,6 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
-
-const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
-};
-
-preloader(images);
 
 const theme = createTheme({
   primary: "white",
@@ -58,31 +39,34 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={[]} transitionDuration={500} theme={theme} progress="number">
-        <Slide transition={["zoom"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["spin"]} bgColor="secondary" textColor="primary">
           <WarmUpSlide/>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="tertiary" textColor="primary">
+        <Slide transition={["slide", "zoom"]} bgColor="tertiary" textColor="primary">
           <ProtocolDefinition/>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["slide", "zoom"]} bgColor="secondary" textColor="primary">
           <HttpProtocol/>
         </Slide>
-        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BrowsersAndHttpForm/>
         </Slide>
-        <Slide transition={[]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <UrlEncoded/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BrowsersAndHttpXhr/>
         </Slide>
-        <Slide transition={[]} bgColor="primary" textColor="secondary">
+        <Slide transition={["fade", "zoom"]} bgColor="primary" textColor="secondary">
           <BrowsersAndHttpSandBox/>
         </Slide>
-        <Slide transition={[]} bgColor="tertiary" textColor="primary">
+        <Slide transition={["slide", "fade"]} bgColor="tertiary" textColor="primary">
           <Async/>
         </Slide>
-        <Slide transition={[]} bgColor="black">
+        <Slide transition={["zoom"]} bgColor="black">
           <AsyncEventloop/>
         </Slide>
-        <Slide transition={[]} bgColor="black">
+        <Slide transition={["zoom"]} bgColor="black">
           <CallbackPromise/>
         </Slide>
       </Deck>

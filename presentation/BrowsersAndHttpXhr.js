@@ -31,7 +31,7 @@ export default class BrowsersAndHttp extends React.Component {
         <Text margin={20} textColor="primary">
           XMLHttpRequest: Microsoft, late 1990s
         </Text>
-        <CodePane source={demoXHR} lang={"javascript"} margin={10}/>
+        <CodePane source={demoXHR} lang={"javascript"} margin={10} textSize={24}/>
       </div>
     );
   }

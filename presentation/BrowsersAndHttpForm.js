@@ -21,10 +21,10 @@ export default class BrowsersAndHttp extends React.Component {
     return (
       <div>
         <Heading size={1} fit textColor="primary">Browsers & HTTP</Heading>
-        <Text margin={10} textColor="primary">
+        <Text textColor="primary">
           Form
         </Text>
-        <CodePane source={demoForm} margin={10}/>
+        <CodePane source={demoForm} textSize={24} fit/>
       </div>
     );
   }
