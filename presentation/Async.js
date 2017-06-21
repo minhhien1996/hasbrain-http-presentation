@@ -24,7 +24,7 @@ export default class Async extends React.Component {
       <Heading size={1} textColor="secondary" fit margin={20}>Asynchronous Requests</Heading>
       <div className="row">
         <div className="col-xs-6">
-          <Image src={images.loading} height={380} margin={10}/>
+          <Image src={images.loading} height={350} margin={10}/>
         </div>
         <div className="col-xs-6">
           <List align="center center" margin={15} style={ { "list-style": "none" } }>

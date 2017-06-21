@@ -23,11 +23,11 @@ export default class WarmUpSlide extends React.Component {
     return (
       <div className="row">
         <div className="col-xs-4">
-          <Image src={images.tim} height="400px" margin="50px 0"/>
+          <Image src={images.tim} height="380px" margin="50px 0"/>
         </div>
         <div className="col-xs-8">
           <BlockQuote>
-            <Quote textSize={40} padding={10} style={ { "line-height": 70 } } bold={false}>I basically write the code, and the specs, and the documentation for how the client and the server talk to each other</Quote>
+            <Quote textSize={35} padding={10} style={ { "line-height": 70 } } bold={false}>I basically write the code, and the specs, and the documentation for how the client and the server talk to each other</Quote>
             <Cite textColor="secondary">Tim Berners-Lee</Cite>
           </BlockQuote>
         </div>

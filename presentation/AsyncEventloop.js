@@ -20,7 +20,7 @@ export default class AsyncEventLoop extends React.Component {
   render() {
     return (<div>
       <Heading size={1} textColor="white" caps={false}>Eventloop</Heading>
-      <Image src={images.eventloop} height="500px"/>
+      <Image src={images.eventloop} height="400px"/>
     </div>);
   }
 }
