@@ -12,9 +12,7 @@ const demoForm = `<form method="GET" action="example/message.html">
   <p>Name: <input type="text" name="name"></p>
   <p>Message:<br><textarea name="message"></textarea></p>
   <p><button type="submit">Send</button></p>
-</form>
-
-GET /example/message.html?name=Jean&message=Yes%3F HTTP/1.1`;
+</form>`;
 
 export default class BrowsersAndHttp extends React.Component {
   render() {

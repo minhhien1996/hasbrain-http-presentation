@@ -17,7 +17,7 @@ export default class BrowsersAndHttp extends React.Component {
           URL Encode
         </Text>
         <Text textColor="primary" textSize={30}>
-          GET /example/message.html<S type="bold" textColor="red">?</S><S type="bold" textColor="tertiary">name=Jean</S><S type="bold" textColor="red">&</S><S type="bold" textColor="tertiary">message=Yes<S type="bold" textColor="green">%3F</S></S>
+          GET /example/message<S type="bold" textColor="red">?</S><S type="bold" textColor="tertiary">name=Jean</S><S type="bold" textColor="red">&</S><S type="bold" textColor="tertiary">message=Yes<S type="bold" textColor="green">%3F</S></S>
         </Text>
       </div>
     );

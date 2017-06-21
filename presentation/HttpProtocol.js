@@ -12,12 +12,12 @@ export default class ProtocolDefinition extends React.Component {
   render() {
     return (
       <div>
-        <Heading size={1} textColor="primary" fit>HTTP - Main points</Heading>
+        <Heading size={1} textColor="primary" fit>HTTP - some main points</Heading>
         <List>
           <ListItem>TCP on default port 80</ListItem>
           <ListItem>URL and query string</ListItem>
-          <ListItem>Method: GET POST PUT DELETE</ListItem>
-          <ListItem>Code: 101 200 304 404 500</ListItem>
+          <ListItem>Method: GET POST PUT DELETE ...</ListItem>
+          <ListItem>Status code: 1xx 2xx 3xx 4xx 5xx</ListItem>
           <ListItem>Header</ListItem>
           <ListItem>Body</ListItem>
         </List>

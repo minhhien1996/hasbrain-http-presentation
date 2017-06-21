@@ -8,10 +8,12 @@ import {
 } from "spectacle";
 
 import WarmUpSlide from "./WarmUpSlide";
+import History from "./History";
 import ProtocolDefinition from "./ProtocolDefinition";
 import HttpProtocol from "./HttpProtocol";
 import BrowsersAndHttpForm from "./BrowsersAndHttpForm";
 import UrlEncoded from "./UrlEncoded";
+import Body from "./Body";
 import BrowsersAndHttpXhr from "./BrowsersAndHttpXhr";
 import BrowsersAndHttpSandBox from "./BrowsersAndHttpSandBox";
 import Async from "./Async";
@@ -43,6 +45,9 @@ export default class Presentation extends React.Component {
           <WarmUpSlide/>
         </Slide>
         <Slide transition={["slide", "zoom"]} bgColor="tertiary" textColor="primary">
+          <History/>
+        </Slide>
+        <Slide transition={["slide", "zoom"]} bgColor="tertiary" textColor="primary">
           <ProtocolDefinition/>
         </Slide>
         <Slide transition={["slide", "zoom"]} bgColor="secondary" textColor="primary">
@@ -53,6 +58,9 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <UrlEncoded/>
+        </Slide>
+         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Body/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BrowsersAndHttpXhr/>
